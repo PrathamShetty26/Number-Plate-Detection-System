@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Automatic Number Plate Recognition System</title>
+</head>
+<body>
+    <header>
+        <h1>Automatic Number Plate Recognition System</h1>
+    </header>
+
+    <main>
+        <p>Upload any of your image or video files below the system will extract number plates it recognizes from the file</p>
+        <div class="container">
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="video">
+                <!-- <br> -->
+                <input type="submit" value="Submit">
+            </form>
+    
+            <div class="output">
+                <h2>Output: </h2>
+                <img src="../static/copy.png" onclick="copyText()" id="copy-btn">
+                <p id="output-text">{{text | safe}}</p>    
+            </div>
+        </div>
+        <p>The Automatic Number Plate Recognition System (ANPR) uses a machine learning model which predicts the location of number plate in an image. Later to extract text from the image Optical Character Recognition technique (OCR) is used.</p>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>Designed and Developed by</p>
+            <p>Omkar Gunjal | Dhiraj Kothawade | Pratham Shetty | Ujjwal Jha</p>
+        </div>
+    </footer>
+</body>
+<script src="../static/index.js"></script>
+</html>
